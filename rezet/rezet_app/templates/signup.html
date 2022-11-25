@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../static/css/signup.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-page-container">
+      <div class="login-header">
+        <a href="../#home" class="back-button">Back</a>
+      </div>
+      <div class="home-registration">
+        <form class="form-container" method="POST">
+          {% csrf_token %}
+          <h1>Register</h1>
+          <div class="signup-input-box">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              placeholder="eg.John"
+              name="first_name"
+              class="input-box"
+              id="first-name"
+            />
+          </div>
+          <div class="signup-input-box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              placeholder="someone@example.com"
+              name="email"
+              id="email"
+              class="input-box"
+            />
+          </div>
+          <div class="signup-input-box">
+            <label for="phonenumber">Phone no.</label>
+            <input
+              type="number"
+              placeholder="eg.+91 944567780"
+              name="mobile"
+              title="Numers only"
+              pattern="[6-9]{1}[0-9]{9}"
+              autocomplete="off"
+              id="phonenumber"
+              class="input-box"
+            />
+          </div>
+          <div class="signup-input-box">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="signup-input-box">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              class=""
+              name="age"
+              placeholder="age"
+              id="age"
+              pattern="[18-100]"
+            />
+          </div>
+          <div class="signup-input-box">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              placeholder=" * * * * * * * "
+              name="password"
+              minlength="8"
+              id="password"
+              class="input-box"
+              autocomplete="off"
+            />
+          </div>
+          <div class="signup-input-box">
+            <label for="confirmpassword">Confirm Password</label>
+            <input
+              type="password"
+              placeholder=" * * * * * * * "
+              name="confirm_password"
+              minlength="8"
+              id="confirmpassword"
+              class="input-box"
+              autocomplete="off"
+            />
+          </div>
+          <a href=""><button>Submit</button></a>
+          <p>if registered please <a href="../login">Sign in</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

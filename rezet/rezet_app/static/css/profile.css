@@ -1,0 +1,17 @@
+.nav-profile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.nav-profile > img {
+  height: 30px;
+}
+
+.back-button{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}

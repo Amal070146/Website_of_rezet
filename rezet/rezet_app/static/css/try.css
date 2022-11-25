@@ -1,0 +1,35 @@
+body {
+    font: 1em sans-serif;
+    text-align: center;
+
+}
+.stage {
+    display: flex;
+    height: 400px;
+    width: 100%;
+}
+.box {
+
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    height: 400px;
+    margin: auto;
+    transform-origin: bottom;
+    width: 400px;
+
+}
+
+.box>img{
+    height: 350px;
+
+}
+
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
