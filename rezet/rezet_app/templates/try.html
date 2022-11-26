@@ -8,11 +8,29 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="stage">
-      <div class="box bounce-1" style="">
-        <img src="../static/image/iphone-front.png" alt="">
-      </div>
+    <div id="container-floating">
+      <p>
+        <a
+          href="javascript:void(0)"
+          onclick="document.getElementById('light').style.display='flex';document.getElementById('fade').style.display='block'"
+          ><div id="floating-button">
+            <p class="plus">+</p>
+            <img
+              class="edit"
+              src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png"
+            /></div
+        ></a>
+      </p>
+    </div>
+    <div id="light" class="white_content">
+      <div>
+      This is the lightbox content.
+      <a
+        href="javascript:void(0)"
+        onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"
+        >Close</a
+      >
+    </div>
     </div>
   </body>
-
 </html>

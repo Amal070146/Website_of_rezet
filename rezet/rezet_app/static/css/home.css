@@ -1,6 +1,15 @@
 #main-wrapper {
   display: none;
 }
+
+.loader-tag-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-line {
+  margin: -100px -100px 50px 290px;
+}
 #loader {
   display: flex;
   align-items: center;
@@ -29,7 +38,15 @@
 .image-inner,
 .image-outer {
   position: absolute;
+}
+.image-inner {
   height: 150px;
+  top: 10px;
+  left: 2px;
+}
+
+.image-outer {
+  height: 160px;
 }
 
 .image-outer {
@@ -54,6 +71,21 @@
   justify-content: center;
   border: 2px solid black;
   border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+
+}
+.back-button {
+  background-color: black;
+  color: white;
+  padding: 2px;
+  width: 40px;
+  border-top-left-radius: 25px;
+  border-end-start-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  text-decoration: none;
 }
 
 .home-links :hover {

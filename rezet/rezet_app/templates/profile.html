@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/css/profile.css" />
-  </head>
-  <body>
+
+    {% extends 'base.html' %}
+{% block content %}
+
+
     <div class="nav-profile">
       <a href="../#home" class="back-button">Back</a>
       <img src="../static/image/logo-with-name-black.png" alt="" />
     </div>
-  </body>
-</html>
+    <div class="profile-image-wrapper">
+        <div style="display: flex;flex-direction: column;"><h1 style="color: #00AEEF;margin-bottom: -10px;">Hi!</h1><h1>Akhil Paul</h1>
+        </div>
+        <div class="profile-image">
+            <img src="../static/image/profile.jpg" alt="">
+        </div>
+    </div>
+    {% endblock %}

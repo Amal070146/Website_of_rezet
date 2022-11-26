@@ -15,7 +15,7 @@ def login(request):
             user = User.objects.get(email=email)
             if user.password == password:
                 request.session['uid'] = user.uid
-                return redirect('hello')
+                return redirect(profile)
             else:
                 data = {'status':"Incorrect Password!!!"}
                 print(data)
@@ -42,9 +42,11 @@ def signup(request):
         if(password == confirm_password):
             user = User(uid=uid,first_name=first_name, last_name=last_name, adr=adr,
                             mobile=mobile, age=age, gender=gender, email=email, password=password)
-            user.save()
-            
+            # user.save()
+            return redirect(profile)
         return render(request, 'signup.html')
     if request.method == 'GET':
         return render(request, 'signup.html')
         
+def profile(request):
+    return render(request, 'profile.html')
