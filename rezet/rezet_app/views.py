@@ -50,3 +50,9 @@ def signup(request):
         
 def profile(request):
     return render(request, 'profile.html')
+
+def online(request):
+    return render(request, 'online-shoping.html')
+
+def offline(request):
+    return render(request, 'offline-shoping.html')

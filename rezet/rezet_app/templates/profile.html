@@ -13,8 +13,60 @@
   <div class="profile-image">
     <img src="../static/image/profile.jpg" alt="" />
   </div>
+  <div class="shopping">
+    <h2>
+      Equipments for <br />
+      life style disease
+    </h2>
+    <a href="../online-shoping">Online Shopping</a>
+    <a href="../offline-shoping">Offline Shopping</a>
+  </div>
 </div>
-<div>
+<div class="dropdown-habitual-wrapper">
+  <div>
+    <h1>Habitual</h1>
+  </div>
+  <div style="display: flex; gap: 30px">
+    <div>
+      <div class="dropdown">
+        <button class="dropbtn">Daily Food Intake</button>
+        <div class="dropdown-content">
+          <a href="#">Oil Food <input type="text" placeholder="1100g" /></a>
+          <a href="#">Fast Food <input type="text" placeholder="1100g" /></a>
+          <a href="#">Salad <input type="text" placeholder="1100g" /></a>
+          <a href="#">Desert <input type="text" placeholder="1100g" /></a>
+          <button>Submit</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="dropdown">
+        <button class="dropbtn">Daily Scheduled Intake</button>
+        <div class="dropdown-content">
+          <a href="#"
+            >Water in take <input type="text" placeholder="1100g"
+          /></a>
+          <a href="#">sleep Time <input type="text" placeholder="5 hrs" /></a>
+          <button>Submit</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="dropdown">
+        <button class="dropbtn">Exercise</button>
+        <div class="dropdown-content">
+          <a href="#">Advanced <input type="text" placeholder="50 min" /></a>
+          <a href="#"
+            >Intermediate <input type="text" placeholder="35 min"
+          /></a>
+          <a href="#">Beginner <input type="text" placeholder="65 min" /></a>
+          <button>Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display: flex; gap: 30px; padding: 5px; align-items: center">
   <div
     class="progress-bar"
     role="progressbar"
@@ -23,7 +75,45 @@
     aria-valuemax="100"
     style="--value: 65"
   >
-    <p style="font-size: 12px;margin-bottom: 10px;">Chance of having <br>the disease</p>
+    <p style="font-size: 12px; margin-top: -10px">
+      Chance of having <br />Lung Cancer
+    </p>
+  </div>
+  <div
+    class="progress-bar"
+    role="progressbar"
+    aria-valuenow="45"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    style="--value: 45"
+  >
+    <p style="font-size: 12px; margin-top: -10px">
+      Chance of having <br />Blood Pressure
+    </p>
+  </div>
+  <div
+    class="progress-bar"
+    role="progressbar"
+    aria-valuenow="90"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    style="--value: 90"
+  >
+    <p style="font-size: 12px; margin-top: -10px">
+      Chance of having <br />Diabetes
+    </p>
+  </div>
+  <div
+    class="progress-bar"
+    role="progressbar"
+    aria-valuenow="50"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    style="--value: 50"
+  >
+    <p style="font-size: 12px; margin-top: -10px">
+      Chance of having <br />Liver Cirrhosis
+    </p>
   </div>
 </div>
 {% endblock %}
