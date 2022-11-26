@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/profile.css" />
+    <link rel="stylesheet" href="../static/css/signup.css" />
+    <link rel="stylesheet" href="../static/css/home.css" />
   </head>
   <body>
-    {% block content %}
-    {% endblock %}
+    {% block content %} {% endblock %}
     <footer>
       <img src="../static/image/logo-with-name-white.png" alt="" />
-      <div>
+      <div style="display: flex;flex-direction:column;gap:5px">
         <span>Contact Us</span>
         <ul>
           <li><img src="../static/image/facebook-logo.png" alt="" /></li>
-          <li><img src="../static/image/facebook-logo.png" alt="" /></li>
-          <li><img src="../static/image/facebook-logo.png" alt="" /></li>
-          <li><img src="../static/image/facebook-logo.png" alt="" /></li>
+          <li><img src="../static/image/Google logo.png" alt="" /></li>
+          <li><img src="../static/image/Whatsapp-Logo.png" alt="" /></li>
+          <li><img src="../static/image/instagram-logo-480.png" alt="" /></li>
         </ul>
       </div>
     </footer>
-    
+    {% block scripts %} {% endblock %}
   </body>
 </html>

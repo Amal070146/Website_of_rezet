@@ -1,17 +1,29 @@
+<link rel="stylesheet" href="../static/css/try2.css" />
+{% extends 'base.html' %} {% block content %}
 
-    {% extends 'base.html' %}
-{% block content %}
-
-
-    <div class="nav-profile">
-      <a href="../#home" class="back-button">Back</a>
-      <img src="../static/image/logo-with-name-black.png" alt="" />
-    </div>
-    <div class="profile-image-wrapper">
-        <div style="display: flex;flex-direction: column;"><h1 style="color: #00AEEF;margin-bottom: -10px;">Hi!</h1><h1>Akhil Paul</h1>
-        </div>
-        <div class="profile-image">
-            <img src="../static/image/profile.jpg" alt="">
-        </div>
-    </div>
-    {% endblock %}
+<div class="nav-profile">
+  <a href="../#home" class="back-button">Back</a>
+  <img src="../static/image/logo-with-name-black.png" alt="" />
+</div>
+<div class="profile-image-wrapper">
+  <div style="display: flex; flex-direction: column">
+    <h1 style="color: #00aeef; margin-bottom: -10px">Hi!</h1>
+    <h1>Akhil Paul</h1>
+  </div>
+  <div class="profile-image">
+    <img src="../static/image/profile.jpg" alt="" />
+  </div>
+</div>
+<div>
+  <div
+    class="progress-bar"
+    role="progressbar"
+    aria-valuenow="65"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    style="--value: 65"
+  >
+    <p style="font-size: 12px;margin-bottom: 10px;">Chance of having <br>the disease</p>
+  </div>
+</div>
+{% endblock %}

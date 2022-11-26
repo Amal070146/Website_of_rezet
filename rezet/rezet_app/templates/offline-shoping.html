@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100vh;
+        width: 100%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var latlng = [
+        {
+          country: "Albania",
+          alpha2: "AL",
+          alpha3: "ALB",
+          num: 8,
+          lat: 10.371594187526886,
+          lng: 76.30393146547652,
+          name: "Kalpaka Medical Shop",
+          img: `https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg`,
+        },
+        {
+          country: "Algeria",
+          alpha2: "DZ",
+          alpha3: "DZA",
+          num: 12,
+          lat: 10.370878597493242,
+          lng: 76.30415595989462,
+          name: "Kalpaka Medical Shop",
+          img: `https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg`,
+        },
+        {
+          country: "American Samoa",
+          alpha2: "AS",
+          alpha3: "ASM",
+          num: 16,
+          lat: 10.373497817477768,
+          lng: 76.30593153666516,
+          name: "Kalpaka Medical Shop",
+          img: `https://lh3.googleusercontent.com/p/AF1QipMqqOmdYOmMs6DNq3zLv33V9Zi6QsHUr7h0Ftnq=s1360-w1360-h1020`,
+        },
+        {
+          country: "Andorra",
+          alpha2: "AD",
+          alpha3: "AND",
+          num: 20,
+          lat: 10.57678374682806,
+          lng: 76.21776567532083,
+          name: "GIRIJA MEDICAL STORES",
+          img: `https://lh3.googleusercontent.com/p/AF1QipOmuv3PzfOpyg8L6_aPwy6J_OM8yUcXKyJzg-4q=s1360-w1360-h1020`,
+        },
+        {
+          country: "Angola",
+          alpha2: "AO",
+          alpha3: "AGO",
+          num: 24,
+          lat: 10.532394214753882,
+          lng: 76.21501178480624,
+          name: "GIRIJA MEDICAL STORES",
+          img: `https://lh3.googleusercontent.com/p/AF1QipOmuv3PzfOpyg8L6_aPwy6J_OM8yUcXKyJzg-4q=s1360-w1360-h1020`,
+        },
+        {
+          country: "Anguilla",
+          alpha2: "AI",
+          alpha3: "AIA",
+          num: 660,
+          lat: 10.523808581598127,
+          lng: 76.18638422534953,
+          name: "C.M. Medicals",
+          img: `https://lh3.googleusercontent.com/proxy/24A4Ki_MU-L2ZChgSbmFx_Pf4gkudJCv53mI34vzXsJTPVwz_mGgxbd6TQ56ctxfZEcXo_spphweBbiQfP5tbpCsLPcKzay8s3XifAJa2FKyp3Tsh1SLE9yaeHZsMvYKmR7wlLfA2yqpv5M7qWr9GrZOFJ7Sct5ICFLhcw=s1360-w1360-h1020`,
+        },
+        {
+          country: "Antarctica",
+          alpha2: "AQ",
+          alpha3: "ATA",
+          num: 10,
+          lat: 10.53913,
+          lng: 76.20074,
+          name: "Relief Medicals",
+          img: `https://lh3.googleusercontent.com/p/AF1QipN2wUsh_C8z1n4mr7-V7gf603SucoDaay1t3QWQ=s1360-w1360-h1020`,
+        },
+        {
+          country: "Antigua and Barbuda",
+          alpha2: "AG",
+          alpha3: "ATG",
+          num: 28,
+          lat: 17.05,
+          lng: -61.8,
+          name: "Kalpaka Medical Shop",
+          img: `https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg`,
+        },
+        {
+          country: "Argentina",
+          alpha2: "AR",
+          alpha3: "ARG",
+          num: 32,
+          lat: -34,
+          lng: -64,
+          name: "Kalpaka Medical Shop",
+          img: `https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg`,
+        },
+        {
+          country: "Armenia",
+          alpha2: "AM",
+          alpha3: "ARM",
+          num: 51,
+          lat: 40,
+          lng: 45,
+          name: "Kalpaka Medical Shop",
+          img: `https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg`,
+        },
+        {
+          country: "Aruba",
+          alpha2: "AW",
+          alpha3: "ABW",
+          num: 533,
+          lat: 12.5,
+          lng: -69.9667,
+          name: "Kalpaka Medical Shop",
+          img: `https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg`,
+        },
+        {
+          country: "Australia",
+          alpha2: "AU",
+          alpha3: "AUS",
+          num: 36,
+          lat: -27,
+          lng: 133,
+          name: "Kalpaka Medical Shop",
+          img: `https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg`,
+        },
+      ];
+      const popupHtml = (image) => {
+        return `
+      <div style="display:flex;flex-direction:column">
+        <span>${latlng[i].name}</span>
+        <img src="${latlng[i].img}">
+      </div>
+      `;
+      };
+      var map = L.map("map").setView([10.53913, 76.20074], 15);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+      for (var i = 0; i < latlng.length; i++) {
+        var marker = L.marker([latlng[i].lat, latlng[i].lng]).addTo(map);
+        marker.bindPopup(popupHtml(latlng[i].img));
+      }
+      const options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0,
+      };
+
+      function success(pos) {
+        const crd = pos.coords;
+        var marker = L.marker([crd.latitude, crd.longitude]).addTo(map);
+      }
+
+      function error(err) {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
+      }
+      window.addEventListener("load", (event) => {
+        navigator.geolocation.getCurrentPosition(success, error, options);
+      });
+    </script>
+  </body>
+</html>
